@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <include android:id="@+id/toolbarViewTrip" layout="@layout/custom_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarViewTrip"
+        android:background="@drawable/view_rounded_top"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            tools:context=".TripManagement.Fragment.ViewTripFragment">
+
+            <TextView
+                android:id="@+id/lblViewTripTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Trip detail"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/containerTripType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblViewTripTitle"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip type"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripType"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip name"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripDestination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripName"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripDestination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip destination"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/containerTripDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/containerTripDestination"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/containerTripFromDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/white">
+
+                    <!--  This is the main content -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/background_border"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/viewTripFromDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <!--  This is the title label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:text="From date"
+                        android:textColor="#707070"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/containerTripToDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/white">
+
+                    <!--  This is the main content -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/background_border"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/viewTripToDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <!--  This is the title label -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:background="@android:color/white"
+                        android:padding="5dp"
+                        android:text="To date"
+                        android:textColor="#707070"
+                        android:textSize="13dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/containerTripRoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripDate"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <!--  This is the title label -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listRoute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp" />
+
+                    <TextView
+                        android:id="@+id/noRoute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="25dp"
+                        android:gravity="center"
+                        android:text="No route found" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip route"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripTransportType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripRoute"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripTransportType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Transport type"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripTransportName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripTransportType"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripTransportName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Transport name"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerRiskAssessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripTransportName"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewRiskAssessment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Risk assessment"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerRiskAssessment"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip total"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerTripDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripTotal"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/viewTripDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Trip description"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerTripDescription">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEditTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnViewAllExpense"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/bg_color"
+                    android:text="Edit"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp"
+                    app:icon="@drawable/ic_baseline_edit_24"
+                    app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDeleteTrip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnEditTrip"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/bg_color"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp"
+                    app:icon="@drawable/ic_baseline_delete_24"
+                    app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewAllExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="60dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/bg_color"
+                    android:text="View Expenses"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="30dp"
+                    app:icon="@drawable/ic_baseline_view_expenses_24"
+                    app:iconGravity="textStart" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

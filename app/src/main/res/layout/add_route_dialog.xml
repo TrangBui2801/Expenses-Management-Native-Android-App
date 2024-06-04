@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/lblAddRoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center"
+        android:text="Add route"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/containerDestination"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Destination"
+        app:boxCornerRadiusBottomEnd="27dp"
+        app:boxCornerRadiusBottomStart="27dp"
+        app:boxCornerRadiusTopEnd="27dp"
+        app:boxCornerRadiusTopStart="27dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtRouteDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/containerDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Date"
+        app:boxCornerRadiusBottomEnd="27dp"
+        app:boxCornerRadiusBottomStart="27dp"
+        app:boxCornerRadiusTopEnd="27dp"
+        app:boxCornerRadiusTopStart="27dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtRouteDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddRouteDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/bg_color"
+            android:text="Add"
+            android:textAllCaps="false"
+            app:cornerRadius="30dp"
+            app:icon="@drawable/ic_baseline_add_item_24"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelRouteDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/bg_color"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            app:cornerRadius="30dp"
+            app:icon="@drawable/ic_baseline_cancel_24"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

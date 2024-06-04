@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.expensemanagement.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/listTripFragment"
+        android:name="com.example.expensemanagement.TripManagement.Fragment.ListTripFragment"
+        android:label="fragment_list_trip"
+        tools:layout="@layout/fragment_list_trip" />
+    <fragment
+        android:id="@+id/addTripFragment"
+        android:name="com.example.expensemanagement.TripManagement.Fragment.AddTripFragment"
+        android:label="fragment_add_trip"
+        tools:layout="@layout/fragment_add_trip" />
+    <fragment
+        android:id="@+id/viewTripFragment"
+        android:name="com.example.expensemanagement.TripManagement.Fragment.ViewTripFragment"
+        android:label="fragment_view_trip"
+        tools:layout="@layout/fragment_view_trip" />
+    <fragment
+        android:id="@+id/addExpenseFragment"
+        android:name="com.example.expensemanagement.ExpenseManagement.Fragment.AddExpenseFragment"
+        android:label="fragment_add_expense"
+        tools:layout="@layout/fragment_add_expense" />
+    <fragment
+        android:id="@+id/listExpenseFragment"
+        android:name="com.example.expensemanagement.ExpenseManagement.Fragment.ListExpenseFragment"
+        android:label="fragment_list_expense"
+        tools:layout="@layout/fragment_list_expense" />
+    <fragment
+        android:id="@+id/viewExpenseFragment"
+        android:name="com.example.expensemanagement.ExpenseManagement.Fragment.ViewExpenseFragment"
+        android:label="fragment_view_expense"
+        tools:layout="@layout/fragment_view_expense" />
+</navigation>

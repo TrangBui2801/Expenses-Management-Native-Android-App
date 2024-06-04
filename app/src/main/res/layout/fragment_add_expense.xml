@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <include
+        android:id="@+id/toolbarAddExpense"
+        layout="@layout/custom_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarAddExpense"
+        android:background="@drawable/view_rounded_top"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            tools:context=".ExpenseManagement.Fragment.AddExpenseFragment">
+
+            <TextView
+                android:id="@+id/addExpenseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Expense detail"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containerExpenseType"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addExpenseTitle"
+                android:layout_marginTop="10dp"
+                android:hint="Type"
+                app:boxCornerRadiusBottomEnd="27dp"
+                app:boxCornerRadiusBottomStart="27dp"
+                app:boxCornerRadiusTopEnd="27dp"
+                app:boxCornerRadiusTopStart="27dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/sltExpenseType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:text="Travel" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containerOtherType"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containerExpenseType"
+                android:layout_marginTop="10dp"
+                android:hint="Other type"
+                app:boxCornerRadiusBottomEnd="27dp"
+                app:boxCornerRadiusBottomStart="27dp"
+                app:boxCornerRadiusTopEnd="27dp"
+                app:boxCornerRadiusTopStart="27dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtOtherType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/containerExpenseDatetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerOtherType"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/containerExpenseDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Expense date"
+                        app:boxCornerRadiusBottomEnd="27dp"
+                        app:boxCornerRadiusBottomStart="27dp"
+                        app:boxCornerRadiusTopEnd="27dp"
+                        app:boxCornerRadiusTopStart="27dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtExpenseDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/containerExpenseTime"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Expense time"
+                        app:boxCornerRadiusBottomEnd="27dp"
+                        app:boxCornerRadiusBottomStart="27dp"
+                        app:boxCornerRadiusTopEnd="27dp"
+                        app:boxCornerRadiusTopStart="27dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtExpenseTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/containerExpenseAmount"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerExpenseDatetime"
+                android:layout_marginTop="10dp"
+                android:hint="Amount"
+                app:boxCornerRadiusBottomEnd="27dp"
+                app:boxCornerRadiusBottomStart="27dp"
+                app:boxCornerRadiusTopEnd="27dp"
+                app:boxCornerRadiusTopStart="27dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtExpenseAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/containerExpenseImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerExpenseAmount"
+                android:background="@android:color/white">
+
+                <!--  This is the main content -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/background_border"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/viewExpenseImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+
+                <!--  This is the title label -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:background="@android:color/white"
+                    android:padding="5dp"
+                    android:text="Image"
+                    android:textColor="#707070"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/containerBtnTakePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerExpenseImage"
+                android:gravity="end">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTakePicture"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/bg_color"
+                    android:text="Take picture"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    app:cornerRadius="30dp"
+                    app:icon="@drawable/ic_baseline_camera_alt_24"
+                    app:iconGravity="textStart" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@id/containerExpenseComment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containerBtnTakePicture"
+                android:layout_marginTop="10dp"
+                android:hint="Comment"
+                app:boxCornerRadiusBottomEnd="27dp"
+                app:boxCornerRadiusBottomStart="27dp"
+                app:boxCornerRadiusTopEnd="27dp"
+                app:boxCornerRadiusTopStart="27dp"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtExpenseComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLines="5"
+                    android:minLines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containerExpenseComment"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/bg_color"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:cornerRadius="30dp"
+                app:icon="@drawable/ic_baseline_add_item_24"
+                app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancelAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnAddExpense"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/bg_color"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                app:cornerRadius="30dp"
+                app:icon="@drawable/ic_baseline_cancel_24"
+                app:iconGravity="textStart" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
